@@ -1,0 +1,169 @@
+body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0;
+height: 100vh;
+background: linear-gradient(rgb(151, 151, 244),white);
+}
+
+#pantalla, footer, button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container{
+    margin: auto;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0, 0.038);
+    position: relative;
+}
+
+
+#botonesContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "ac dividido por menos"
+    "siete ocho nueve mas"
+    "cuatro cinco seis mas"
+    "uno dos tres igual"
+    "c cero punto igual";
+    gap: 5px;
+    width: 400px;
+    aspect-ratio: 1;
+    margin-top: 5px;
+    background-color: rgba(255,255,255,0.05);
+}
+
+#pantalla{
+  border: 1px solid black;
+  border-radius: 2px;
+  text-align: end;
+  padding:  10px;
+  background-color: rgb(255,255, 255, 0.05);
+  font-size: 3rem;
+  margin: 0;
+  padding: 10px;
+}
+
+#indicadorOperacion{
+    font-size: x-large;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+}
+
+button{
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    border-radius: 2px;
+    border-width: 1px;
+    cursor: pointer;
+    transition: 30ms;
+    background-color: rgba(255,255,255,0.54);
+}
+
+button:hover{
+    background-color: bisque;
+}
+
+#indicarOperacion{
+    position: absolute;
+    font-size: larger;
+    top: 5px;
+    left: 30px;
+}
+
+footer{
+    margin-top: auto;
+    text-align: center;
+    background-color: rgba(100, 65, 190, 0.432);
+    width: 100%;
+}
+
+/*Area de elementos*/
+#cero{
+    grid-area: cero;
+}
+#uno{
+    grid-area: uno;
+}
+#dos{
+    grid-area: dos;
+}
+#tres{
+    grid-area: tres;
+}
+#cuatro{
+    grid-area: cuatro;
+}
+#cinco{
+    grid-area: cinco;
+}
+#seis{
+    grid-area: seis;
+}
+#siete{
+    grid-area: siete;
+}
+#ocho{
+    grid-area: ocho;
+}
+#nueve{
+    grid-area: nueve;
+}
+#dividido{
+    grid-area: dividido;
+}
+#mas{
+    grid-area: mas;
+}
+#por{
+    grid-area: por;
+}
+#menos{
+    grid-area: menos;
+}
+#igual{
+    grid-area: igual;
+}
+
+.calculadora td button{
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+
+#resultado{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 600px) {
+   
+    .calculadora td {
+        flex-basis: 50%;
+    }
+
+    .calculadora td button{
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #resultado{
+        font-size: 30px;
+        margin-bottom:20px;
+    }
+  }
